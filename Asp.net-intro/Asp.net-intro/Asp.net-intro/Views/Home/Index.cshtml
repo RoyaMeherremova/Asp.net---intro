@@ -1,0 +1,47 @@
+﻿@*viewdan gelen arr gebul edirik tipin bildiririk*@
+@model int[]
+
+
+
+
+
+
+
+@{
+    var count = 100;
+    List<string> names = new List<string>() { "Shaiq", "Konul", "Ceyhun" };
+}
+
+@*c# kodlari @-isaresiynen geyd olunur*@
+
+<h1>Home page</h1>
+
+<section id="home">
+    <div class="navbar">
+        <h3 style="color:red">Start backend</h3>    
+        <span>@count</span>
+        <ul>
+            @for(int i = 0; i < 15; i++)
+            {
+                <li>@count</li>
+                count++;
+            }
+         
+        </ul>
+        @foreach(var item in names)
+        {
+            <h1>@item</h1>
+        }
+     @*   Model-viewdan gebul elediyimiz arraydi*@
+        @foreach (var item in Model)
+        {
+            <h1>@item</h1>
+        }
+
+    
+
+    </div>
+</section>
+<script>
+    console.log("salam")
+</script>
